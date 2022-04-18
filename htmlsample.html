@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTMLの基礎</title>
+</head>
+<body id="pagetop" style="background:url(images/backgroundImg.png);">
+    <div id="5_2_2">
+        b要素は<b>テキスト</b>を太字にします。<br>
+        i要素は<i>テキスト</i>をイタリック体にします。<br>
+        s要素は<s>テキスト</s>に取り消し線を引きます。<br>
+        u要素は<u>テキスト</u>に下線を引きます。<br>
+        em要素は<em>テキスト</em>を強調します。<br>
+        strong要素は<strong>テキスト</strong>を強調します。<br>
+        small要素は<small>テキスト</small>を小さくします。<br>
+        sub要素は<sub>テキスト</sub>を下付き文字にします。<br>
+        sup要素は<sup>テキスト</sup>を上付き文字にします。<br>
+    </div>
+    <div id="5_2_3">
+        <h1>見出し1</h1>
+        <h3>見出し3</h3>
+        <h6>見出し6</h6>
+        br要素は改行<br>します。
+        <p>p要素は1つの段落を形成します。</p>
+        <pre>pre要素内のテキストは、
+            整形済みテキストとして扱われます。
+        </pre>
+        hr要素は横方向の罫線を引きます。<hr>
+    </div>
+
+    <div id="5_2_4">
+        ol要素
+        <ol type="a">
+            <li>順序(番号)付きリストを形成します。</li>
+            <li>リストの項目の先頭に識別子が付きます。</li>
+            <li>識別子はtype属性により指定します。</li>
+            <li>子要素は、リストの項目を形成します。</li>
+        </ol>
+        ul要素
+        <ul>
+            <li>順序のないリストを形成します。</li>
+            <li>子要素は、リストの項目を形成するli要素です。</li>
+        </ul>
+        <dl>
+            <dt>dl要素</dt>
+            <dd>定義・説明リスト(説明される言葉とその説明)を形成します。子要素としてdt要素(説明される言葉)とdd要素(説明や定義)を含みます。</dd>
+        </dl>
+    </div>
+
+    <div id="5_2_5">
+        <table border="1" cellspacing="0" cellpadding="3">
+            <tr bgcolor="#cccccc">
+                <th>要素</th>
+                <th>役割</th>
+            </tr>
+            <tr>
+                <td>table</td>
+                <td>テーブルを形成します。</td>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>横の行を定義します。</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>trの要素内で見出しを定義するセルを形成します。</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+
+    <table border="1" cellpadding="0">
+        <tr>
+            <td colspan="2">
+                左右に隣り合うセルを結合する場合はcolspan属性を使用します。
+            </td>
+            <tr>
+                <td rowspan="2">
+                    上下に隣り合うセルを結合する場合はrowspan属性を使用します。
+                </td>
+                <td>colspan属性に結合するセル数を指定します。</td>
+            </tr>
+            <tr>
+                <td>rowspan属性に結合するセル数を指定します。</td>
+            </tr>
+        </tr>
+    </table>
+    <br>
+
+    <table width="100%" height="100" cellspacing="0">
+        <tr>
+            <td rowspan="2" width="20%" bgcolor="#999999">サイドメニュー</td>
+            <td width="80%" bgcolor="#DDDDDD">コンテンツ</td>
+        </tr>
+
+        <tr>
+            <td width="80%" bgcolor="#FFFFFF">コンテンツ</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" bgcolor="#BBBBBB">フッター</td>
+        </tr>
+    </table>
+    <br>
+
+    <div id="5_2_6">
+        <div style="background:#BBBBBB;">
+            範囲を指定するための要素が、div要素とspan要素です。div要素はブロックレベル要素であり、「一塊の範囲」を定義するために用いられます。
+        </div>
+        <p>
+            span要素はインライン要素であり「<span style="background:#BBBBBB;">文章内の一部(語句など)</span>」
+            を指定するために用いられる。
+        </p>
+    </div>
+
+    <div id="5_3_1">
+        <a href="http://www.yahoo.co.jp">Yahoo!</a><br>
+        <a href="#pagetop">ページの先頭へ</a>
+    </div>
+    <br>
+    
+    <div id="5_3_2">
+        <img src="images/image01.jpg" alt="ケーキの画像">
+        <img src="images/image01.jpg" alt="ケーキの画像" width="10%">
+        <img src="images/image01.jpg" alt="ケーキの画像" height="100">
+        <img src="images/image01.jpg" alt="ケーキの画像" width="200" height="100">
+    </div>
+</body>
+</html>
