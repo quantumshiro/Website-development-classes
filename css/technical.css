@@ -31,12 +31,12 @@ img {
 }
 
 #back img {
-    display: inline-block;
+    display: block;
     float: right;
 }
 
 #machine img {
-    display: inline-block;
+    display: inline-flex;
     padding: auto;
     float: center;
     margin-left: 4.5em;
