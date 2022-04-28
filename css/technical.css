@@ -33,6 +33,8 @@ img {
 #back img {
     display: block;
     float: right;
+    width: 350px;
+    height: 150px;
 }
 
 #machine img {
@@ -40,6 +42,7 @@ img {
     padding: auto;
     float: center;
     margin-left: 4.5em;
+    width: 300px;
 }
 
 footer {
