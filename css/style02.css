@@ -1,0 +1,36 @@
+@charset "utf-8";
+h2 {
+    color: #AAA;
+}
+
+.title {
+    background-color: #888;
+}
+
+#mainNavi {
+    background-color: #AAA;
+}
+
+.column h2 {
+    color: #333;
+}
+
+h1, h2 {
+    color: #FFF;
+}
+
+a:link {
+    color: #333;
+}
+
+a:visited {
+    color: #FFF;
+}
+
+.wrapper:hover {
+    background-color: #EEE;
+}
+
+.wrapper:active {
+    background-color: #AAA;
+}

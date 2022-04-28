@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+#content {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 960px;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#name p {
+    color: #000;
+    font-size: 1.0em;
+    /* font-weight: bold; */
+    text-align: right;
+    margin: 0 0 1em 0;
+}
+
+#detail p {
+    text-align: left;
+    margin-left: 2.5em;
+}
+
+img {
+    margin: 20px 40px;
+    display: inline-block;
+    padding: auto;
+}
+
+#back img {
+    display: inline-block;
+    float: right;
+}
+
+#machine img {
+    display: inline-block;
+    padding: auto;
+    float: center;
+    margin-left: 4.5em;
+}
+
+footer {
+    text-align: center;
+}
