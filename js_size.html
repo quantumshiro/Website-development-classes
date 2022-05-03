@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Get Sizet</title>
+<script type="text/javascript">
+    window.onload = function() {
+        var square = document.getElementById('square');
+        square.style.height = "100px";
+        square.style.width = "200px";
+        document.getElementById('child').innnerHTML
+        = "(element).style.height = " + square.style.height + ";";
+        + "<br>(element).style.width = " + square.style.width + ";";
+        + "<br>(element).style.fontSize = " + square.style.fontSize + ";";
+    };
+</script>
+<style type="text/css">
+    #square {
+        border: 3px solid #000000;
+        padding: 20px;
+        margin: 12px
+    }
+
+    #child {
+        background: #bbbbbb;
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+    <div id="square">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

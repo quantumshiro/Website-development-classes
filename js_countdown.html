@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript CountDown</title>
+<script type="text/javascript"></script>
+<style type="text/css">
+    #msg {
+        font-size: 36px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <input type="button" value="start" onclick="startCD(10);">
+    <p id="msg"></p>
+</body>
+<script>
+    var time;
+    function starCD(starTime) {
+        time = starTime;
+        timeID = window.setInterval('countDown()', 1000);
+    }
+
+    function countDown() {
+        if (time >= 0) {
+            document.getElementById('msg').innerHTML = time;
+            time--;
+        } else {
+            window.clearInterval(timeID);
+        }
+    }
+</script>
+</html>

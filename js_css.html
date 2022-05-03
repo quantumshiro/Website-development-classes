@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript CSS</title>
+<script type="text/javascript"></script>
+</head>
+<body>
+    <form>
+        <p>カラーコードを入力して下さい。(例 : #FFFFFF)</p>
+        <input type="text" id="colorcode">
+        <input type="button" value="確定" onload="setColor();">
+    </form>
+</body>
+<script>
+    function setColor() {
+        var color = document.getElementById('colorcode');
+        document.body.style.backgroundColor = color.value;
+    }
+</script>
+</html>

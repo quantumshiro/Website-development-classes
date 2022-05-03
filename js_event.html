@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript Event</title>
+<script type="text/javascript"></script>
+</head>
+<body>
+    <form>
+        <input type="button" value="警告1" onclick="window.alert('警告1: メッセージです。');">
+        <input type="button" value="警告2" onclick="btn2Click();">
+        <input type="button" value="確認" id="btn3">
+        <input type="button" value="入力" id="btn4" onload="btn4Click()">
+    </form>
+</body>
+<script>
+    function btn2Click() {
+        window.alert('警告2: メッセージです。');
+    };
+
+    window.onload = function() {
+        document.getElementById('btn3').onclick = function() {
+            window.confirm('確認です。');
+        }
+
+        window.onload = function() {
+            document.getElementById('btn4').addEventListener('click', btn4Click);
+        }
+    };
+
+    function btn4Click() {
+        window.prompt('入力してください', 'デフォルトの文字列です。');
+    }
+</script>
+</html>
