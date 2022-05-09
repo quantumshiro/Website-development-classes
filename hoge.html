@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>hoge</title>
+</head>
+<body>
+    <p>現在の幅は<span id="width"></span>pxです。</p>
+    <p>現在の高さは<span id="hight"></span>pxです。</p>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var width = document.getElementById("width");
+            var hight = document.getElementById("hight");
+            width.innerHTML = window.innerWidth;
+            hight.innerHTML = window.innerHeight;
+        });
+
+        window.onresize = function() {
+            var elem_width = document.getElementById("width");
+            var elem_hight = document.getElementById("hight");
+            elem_width.innerHTML = window.innerWidth;
+            elem_hight.innerHTML = window.innerHeight;
+        }
+    </script>
+</body>
+</html>

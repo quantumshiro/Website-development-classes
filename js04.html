@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DOMとJavaScriptの最初</title>
+</head>
+<body>
+  <!-- <img src="./img/p1.png" onmouseover="src='./img/p2.png';" onmouseout="src='./img/p1.png';" /> -->
+  <!-- ここから３行はHTMLのコメント文になっていますが、上の<img>行を消して下の<img>行を有効化します -->
+  <img src="img/p1.png" onclick="bigger();"/>
+  <p id="変化部">hogehoge</p>
+  <script type="text/javascript">
+    size = 100;
+    function bigger() {
+      var elem = document.getElementById("変化部");
+      size += 10;
+      elem.style.fontSize = size + "%";
+    }
+  </script>
+</body>
+</html>
