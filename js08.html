@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    img {   /* おまじないです。ついでにJavaScriptのコメント文の書き方はC言語風 */
+  	  position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <img src="img/apple.png" id="apple" width="100" height="100">
+  <script type="text/javascript">
+    var wh = window.innerHeight;
+    var ww = window.innerWidth;
+    var rotation = 0;
+
+    function moveImg() {
+      var apple = document.getElementById("apple");
+      apple.getBoundingClientRect();
+      var x = apple.getBoundingClientRect().right;
+      var y = apple.getBoundingClientRect().bottom;
+      if (x < ww && y < wh) {
+        var x = apple.offsetLeft + 20;
+        var y = apple.offsetTop + 5;
+        apple.style.left = x + "px";
+        apple.style.top = y + "px";
+        rotation += 20;
+        document.getElementById("apple").style.transform = "rotate(" + rotation + "deg)";
+      } else {
+        window.clearInterval(timerID);
+      }
+    }
+
+    window.onload = function() {
+      timerID = setInterval("moveImg()", 10);
+    }
+  </script>
+</body>
+</html>

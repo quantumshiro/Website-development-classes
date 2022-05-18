@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    img {   /* おまじないです。ついでにJavaScriptのコメント文の書き方はC言語風 */
+  	  position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <img src="img/apple.png" id="apple" width="100" height="100" onclick="jampImg();">
+  <h2 align="right"><span id="watchtimer"></span></h2>
+  <h2 align="right"><span id="count"></span></h2>
+  <script type="text/javascript">
+    var wh = window.innerHeight - 100;
+    var ww = window.innerWidth - 100;
+    var mini = 3;
+    let count = 0;
+    var timerID;
+    let countclick = 0;
+
+    window.onload = function() {
+      var watchtimer = document.getElementById("watchtimer");
+      var apple = document.getElementById("apple");
+      // count up timer msec
+      timerID = setInterval(function() {
+        count++;
+        watchtimer.innerHTML = count / 10  + "sec";
+      }, 100);
+    }
+
+    function countClick() {
+      countclick++;
+      document.getElementById("count").innerHTML = "click: " + countclick;
+    }
+
+    function jampImg() {
+      var posX = ww * Math.random();
+      var posY = wh * Math.random();
+      var apple = document.getElementById("apple");
+      if (posX < ww && posY < wh) {
+        apple.style.left = posX + "px";
+        apple.style.top = posY + "px";
+        apple.width -= 3;
+        apple.height -= 3;
+        countClick();
+      }
+      if (apple.width == 10 && apple.height == 10) {
+        apple.width = 100;
+        apple.height = 100;
+        
+        // can not click apple
+        apple.onclick = null;
+
+        window.clearInterval(timerID);
+      }
+    }
+  </script>
+</body>
+</html>

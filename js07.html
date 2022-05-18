@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    img {   /* おまじないです。ついでにJavaScriptのコメント文の書き方はC言語風 */
+  	  position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <img src="img/apple.png" id="apple" width="100" height="100" onclick="moveImg();">
+  <script type="text/javascript">
+    var rotation = 0;
+    function moveImg() {
+        rotation += 20;
+        document.getElementById("apple").style.transform = "rotate(" + rotation + "deg)";
+    }
+  </script>
+</body>
+</html>
