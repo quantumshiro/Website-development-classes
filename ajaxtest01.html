@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http:/js/jquery-2.2.4.min.js"></script>
+    <title>Ajaxによるファイル読み込み</title>
+</head>
+    <h1>XMLHttpRequest() の使用例 </h1>
+    <form name="ajaxForm">
+        <input type="button" value="読み込み" onclick="updatePage()">
+        <br>
+        <textarea name="result" cols="40" rows="5"></textarea>
+    </form>
+<script>
+    function updatePage() {
+        $.get("ajdata.txt", displayData);
+    }
+
+    function displayData(data) {
+        document.ajaxForm.result.value = data;
+    }
+
+</script>
+</html>

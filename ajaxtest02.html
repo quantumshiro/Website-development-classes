@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Ajaxテスト</title>
+</head>
+<body>
+	<p>選択項目を選び、氏名欄にあなたの名前を入力して送信してください。</p>
+	<form name="fm">
+		<p> 座席希望 　
+			<input type="checkbox" name="smoking" value="No">禁煙席希望
+			<input type="checkbox" name="window" value="Yes">窓際希望
+		</p><p>性別　　
+			<input type="radio" name="gender" value="Male" />男性
+			<input type="radio" name="gender" value="Female" />女性
+		</p><p>お名前　　
+			<input type="text" name="name" />様　　人数
+			<select name="num">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+			</select>
+		</p><p>
+			<input type="button" value="送信" onclick="sendData()" />
+		</p>
+	</form>
+	<p id="result"></p>
+	<p><img src="img/cake.jpg"/>
+	<script type="text/javascript">
+		function sendData(){
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+			var result = document.getElementById('result');
+			if (xhr.readyState == 4 && xhr.status == 200) {
+					result.innerHTML = xhr.responseText;
+			} else result.innerHTML = "サーバー処理中.....";
+			}
+		
+			var s_param = 'name=' +  encodeURIComponent(document.fm.name.value);
+			s_param += '&num=' + document.fm.num.value;
+
+			if(document.fm.smoking.checked) s_param += '&smoking=No';
+			if(document.fm.window.checked) s_param += '&window=Yes';
+
+			var s_gender = document.getElementsByName("gender");
+			if(s_gender[0].checked){ s_param += '&gender=' + s_gender[0].value; }
+			else { s_param += '&gender=' + s_gender[1].value; }
+			xhr.open('POST', 'calc.php', true);
+			xhr.setRequestHeader('content-type', 
+					'application/x-www-form-urlencoded;charset=UTF-8');
+			xhr.send( s_param );
+		}
+		</script>
+</body>
+</html>

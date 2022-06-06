@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>フォームを含むページ</title>
+</head>
+<body>
+	<p>選択項目を選び、氏名欄にあなたの名前を入力して送信してください。</p>
+	<form method="post" action="./formrecv.php">
+		<p> 座席希望 　
+			<input type="checkbox" name="喫煙" value="No" />禁煙席希望　
+			<input type="checkbox" name="禁煙" value="No">喫煙席希望
+		</p>
+		<p>性別　　
+			<input type="radio" name="性別" value="Male" />男性
+			<input type="radio" name="性別" value="Female" />女性
+		</p>
+		<p>お名前　　
+			<input type="text" name="氏名" />様　　人数
+			<select name="人数">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+		</p>
+		<p>
+			<input type="submit" value="送信" />
+			<input type="reset" value="やめる" />
+		</p>
+	</form>
+</body>
+</html>

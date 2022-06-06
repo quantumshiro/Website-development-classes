@@ -1,0 +1,4 @@
+this is sample data
+line two of sample data
+line three of sample data
+日本後も書いてあります。この文書はUTF-8でセーブしなければなりません。

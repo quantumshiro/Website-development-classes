@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>サーバーとのやりとり</title>
+</head>
+<body>
+<h2>あなたの生まれ年は？</h2>
+<form method="get" action="./new_calcage.php">
+	<p>　
+		<input type="radio" name="元号" value="M" />明治
+		<input type="radio" name="元号" value="T" />大正　
+		<input type="radio" name="元号" value="S" />昭和　
+		<input type="radio" name="元号" value="H" />平成　
+		<input type="radio" name="元号" value="R" />令和
+		<br><br>
+		<input type="text" name="year" />年
+		<input type="text" name="month" />月
+		<input type="text" name="day" />日
+	</p>
+	<p>
+		<input type="submit" value="送信" />
+		<input type="reset"  value="やめる" />
+</form>
+</body>
+</html>
