@@ -33,10 +33,10 @@
 		function sendData(){
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
-			var result = document.getElementById('result');
-			if (xhr.readyState == 4 && xhr.status == 200) {
-					result.innerHTML = xhr.responseText;
-			} else result.innerHTML = "サーバー処理中.....";
+				var result = document.getElementById('result');
+				if (xhr.readyState == 4 && xhr.status == 200) {
+						result.innerHTML = xhr.responseText;
+				} else result.innerHTML = "サーバー処理中.....";
 			}
 		
 			var s_param = 'name=' +  encodeURIComponent(document.fm.name.value);
